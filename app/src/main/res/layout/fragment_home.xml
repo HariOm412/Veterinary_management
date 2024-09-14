@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/purplewall"
+    android:fitsSystemWindows="true"
+    android:scrollbars="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="56dp"> <!-- Adjust padding to accommodate bottom navigation bar -->
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/toolbar"
+            android:fitsSystemWindows="true" />
+
+        <ViewFlipper
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:autoStart="true"
+            android:flipInterval="2000"
+            android:inAnimation="@anim/slide_in_right"
+            android:outAnimation="@anim/slide_out_left">
+
+            <!-- FrameLayout with padding and background for images -->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/saleban_1" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle"
+                android:padding="16dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/saleban2" />
+            </FrameLayout>
+
+            <!-- Add more FrameLayouts with images if needed -->
+
+        </ViewFlipper>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="83dp"
+                    android:layout_height="77dp">
+                    <ImageButton
+                        android:id="@+id/consult"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circular_button_background"
+                        android:scaleType="centerInside" />
+                    <ImageView
+                        android:id="@+id/con"
+                        android:layout_width="31dp"
+                        android:layout_height="39dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/cosult" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/t1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Consultation" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="83dp"
+                    android:layout_height="77dp">
+                    <ImageButton
+                        android:id="@+id/groom"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circular_button_background"
+                        android:scaleType="centerInside" />
+                    <ImageView
+                        android:id="@+id/gro"
+                        android:layout_width="31dp"
+                        android:layout_height="39dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/groom" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/t2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Grooming" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <FrameLayout
+                    android:layout_width="83dp"
+                    android:layout_height="77dp">
+                    <ImageButton
+                        android:id="@+id/vacci"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/circular_button_background"
+                        android:scaleType="centerInside" />
+                    <ImageView
+                        android:id="@+id/vac"
+                        android:layout_width="36dp"
+                        android:layout_height="37dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/vac" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/t3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Vaccination" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="      Meet Our Experts"
+            android:textColor="@color/purple"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="30dp">
+
+            <!-- LinearLayout for horizontal scrolling -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/ex1"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ex1" />
+
+                <ImageView
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ex2" />
+
+                <ImageView
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ex3" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

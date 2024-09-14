@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "831476382241",
+    "project_id": "vetrinarymanagemnet",
+    "storage_bucket": "vetrinarymanagemnet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831476382241:android:268f71ca279c689c7c8160",
+        "android_client_info": {
+          "package_name": "com.example.vetrinarymanagemnet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLP_zb3btEBjAZQmPntPx2TpP5YshjRfc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

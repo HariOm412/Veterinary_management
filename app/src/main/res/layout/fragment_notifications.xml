@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/purplewall"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"
+        android:fitsSystemWindows="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="130dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image" />
+
+    <TextView
+        android:id="@+id/petdetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="264dp"
+        android:gravity="center"
+        android:text="Pet details"
+        android:textColor="@color/purple"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/button_read_pet"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/read_mode_24"
+        android:text="Read Pet Detail"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_add_pet" />
+
+    <Button
+        android:id="@+id/button_update_pet"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/upload_24"
+        android:text="Update Pet Detail"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_read_pet" />
+
+    <Button
+        android:id="@+id/button_add_pet"
+        android:layout_width="225dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:drawableLeft="@drawable/baseline_add_24"
+        android:text="Add Pet Detail"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/petdetails" />
+
+    <Button
+        android:id="@+id/button_delete_pet"
+        android:layout_width="228dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/baseline_clear_24"
+        android:text="Delete Pet Detail"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_update_pet" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
